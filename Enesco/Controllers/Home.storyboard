@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0k6-Yy-yda">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music-->
+        <scene sceneID="08t-Xc-Bgo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DHp-ii-fgV" customClass="NavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Music" image="tab_music" id="sSz-nE-N3h"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ey5-V1-0yb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.25098039215686274" green="0.89411764705882346" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AlG-UJ-czI" kind="relationship" relationship="rootViewController" id="Ahj-fb-Rrc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGV-Vv-Qme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="851"/>
+        </scene>
+        <!--PeePing-->
+        <scene sceneID="aMV-yk-pN2">
+            <objects>
+                <collectionViewController id="AlG-UJ-czI" customClass="MusicCollecionVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="syS-tz-zzG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w7h-Uc-ssW">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MusicCollectionCell" id="jLI-PR-8e6" customClass="MusicCollectionCell">
+                                <rect key="frame" x="10" y="64" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="300" height="300"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AlG-UJ-czI" id="Pwn-qL-Q8f"/>
+                            <outlet property="delegate" destination="AlG-UJ-czI" id="6cy-bh-x8o"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="PeePing" id="yxX-a4-OBm">
+                        <barButtonItem key="leftBarButtonItem" image="item_List" id="aYP-cE-Nhv">
+                            <connections>
+                                <action selector="showMusicTypeView:" destination="AlG-UJ-czI" id="I5d-5j-1eJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mza-F5-cL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="1530"/>
+        </scene>
+        <!--DownloadVC-->
+        <scene sceneID="bJn-2H-Udq">
+            <objects>
+                <tableViewController id="C75-ON-QtS" customClass="DownloadVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2f0-f2-CFz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DownloadCell" id="a48-tn-rOH" customClass="DownloadCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a48-tn-rOH" id="siL-8u-b99">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49E-gv-v2f">
+                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-GE-Kms" customClass="PKDownloadButton">
+                                            <rect key="frame" x="222" y="7" width="90" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="3lK-JJ-LAK"/>
+                                                <constraint firstAttribute="width" constant="90" id="5Yk-UV-fdv"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Dff-GE-Kms" firstAttribute="centerY" secondItem="siL-8u-b99" secondAttribute="centerY" id="3gT-mg-eY4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Dff-GE-Kms" secondAttribute="trailing" id="DJs-zj-aUp"/>
+                                        <constraint firstItem="49E-gv-v2f" firstAttribute="centerY" secondItem="siL-8u-b99" secondAttribute="centerY" id="T3a-48-bUW"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="49E-gv-v2f" secondAttribute="leading" id="xWJ-rB-OXm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downloadButton" destination="Dff-GE-Kms" id="WxF-MB-v9m"/>
+                                    <outlet property="musicName" destination="49E-gv-v2f" id="LZa-9r-VLs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C75-ON-QtS" id="lBQ-RV-qyd"/>
+                            <outlet property="delegate" destination="C75-ON-QtS" id="M0f-Pw-TLj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="p9f-8f-gQB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BuB-kj-dWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="2221"/>
+        </scene>
+        <!--DownloadList-->
+        <scene sceneID="2Av-nw-5u0">
+            <objects>
+                <collectionViewController id="MZk-Gl-h3X" customClass="LocalMusicVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UFP-rb-qyL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1PX-tC-swk">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MusicCollectionCell" id="dZf-un-WBB">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="MZk-Gl-h3X" id="jNI-o1-xxK"/>
+                            <outlet property="delegate" destination="MZk-Gl-h3X" id="RNg-7E-mPm"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="DownloadList" id="Io2-Dz-ph2">
+                        <barButtonItem key="leftBarButtonItem" title="List" id="iWH-g7-SXM">
+                            <connections>
+                                <segue destination="C75-ON-QtS" kind="show" id="qrc-ch-YBY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aG2-V4-rp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="1530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZiB-An-J30">
+            <objects>
+                <viewController id="ymM-kD-6ml" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Lx-jR-VAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="bsZ-JH-4jN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YpQ-ox-ir6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zSp-9Q-Ep6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsu-Ls-jo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="1530"/>
+        </scene>
+        <!--Home Tabbar Controller-->
+        <scene sceneID="wSk-iC-AKN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0k6-Yy-yda" customClass="HomeTabbarController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="rOe-59-KcA">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="selectedImageTintColor" red="0.25098039220000001" green="0.89411764709999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DHp-ii-fgV" kind="relationship" relationship="viewControllers" id="Cch-Bp-adr"/>
+                        <segue destination="D3c-4E-q20" kind="relationship" relationship="viewControllers" id="ITK-y8-Iue"/>
+                        <segue destination="iB1-Kj-1I9" kind="relationship" relationship="viewControllers" id="Ie0-IC-IAF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgS-24-9ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="75"/>
+        </scene>
+        <!--Download-->
+        <scene sceneID="ekj-Y3-4f4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D3c-4E-q20" customClass="NavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Download" image="tab_download" id="Tvo-ff-z46"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="TS2-i1-EZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.25098039220000001" green="0.89411764709999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MZk-Gl-h3X" kind="relationship" relationship="rootViewController" id="SlQ-iQ-kEO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcj-mQ-pYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="851"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="RTh-CI-JeF">
+            <objects>
+                <navigationController id="iB1-Kj-1I9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="logUser" id="4NF-AS-xLY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="oIJ-NZ-h5c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ymM-kD-6ml" kind="relationship" relationship="rootViewController" id="XTY-9T-QBT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpA-gS-fwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="851"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="item_List" width="25" height="25"/>
+        <image name="logUser" width="15" height="17"/>
+        <image name="tab_download" width="32" height="32"/>
+        <image name="tab_music" width="32" height="32"/>
+    </resources>
+    <color key="tintColor" red="0.25098039220000001" green="0.89411764709999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+</document>

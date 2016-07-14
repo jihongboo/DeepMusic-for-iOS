@@ -1,0 +1,72 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DOUAudioStreamer (0.2.15)
+  - DownloadButton (0.1.0)
+  - GVUserDefaults (1.0.2)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - Masonry (1.0.1)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.10)
+  - Realm (1.0.1):
+    - Realm/Headers (= 1.0.1)
+  - Realm/Headers (1.0.1)
+  - RealReachability (1.1.7):
+    - RealReachability/Connection (= 1.1.7)
+    - RealReachability/Ping (= 1.1.7)
+  - RealReachability/Connection (1.1.7)
+  - RealReachability/Ping (1.1.7)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - tingyunApp (2.4.0)
+  - ZFDownload (0.0.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - DOUAudioStreamer
+  - DownloadButton
+  - GVUserDefaults
+  - Mantle
+  - Masonry
+  - MBProgressHUD
+  - MJRefresh
+  - Realm
+  - RealReachability
+  - SDWebImage
+  - tingyunApp
+  - ZFDownload
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DOUAudioStreamer: 14f217bab01b52171fc2bd7d96e1f8fdd50fce68
+  DownloadButton: 49a21a89e0d7d1b42d9134f79aaa40e727cd57c3
+  GVUserDefaults: 52d48cf8ba578b40a1a76312b196dfc9134ba36a
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
+  RealReachability: 8b6644c6b3145f7552ed83bffb52c49b0f3b55e3
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  tingyunApp: 8453cf5cbbd546903c11b03d9e7fb6883372ccde
+  ZFDownload: 704c84055407986bec8c1be89fa85b4a7b8f172e
+
+PODFILE CHECKSUM: dbce46412ba2062fdcdfcd9e83df2be02dc3c5e3
+
+COCOAPODS: 1.0.1
