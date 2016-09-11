@@ -5,4 +5,4 @@
 
 
 进一步功能正在开发中。
- ![image](https://github.com/jihongboo/DeepMusic-for-iOS/blob/master/deep.png)
+ ![image](https://github.com/jihongboo/DeepMusic-for-iOS/blob/master/deep.jpg)
